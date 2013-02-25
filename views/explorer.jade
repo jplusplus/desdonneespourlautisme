@@ -1,9 +1,9 @@
 extends layout
 
 block stylesheets
-    link(rel="stylesheet", href="http://libs.cartodb.com/cartodb.js/v2/themes/css/cartodb.css")
+    link(rel="stylesheet", href="//libs.cartodb.com/cartodb.js/v2/themes/css/cartodb.css")
     //if lt IE 8
-        link(rel="stylesheet", href="http://libs.cartodb.com/cartodb.js/v2/themes/css/cartodb.ie.css")    
+        link(rel="stylesheet", href="//libs.cartodb.com/cartodb.js/v2/themes/css/cartodb.ie.css")    
 
 block content
     #map
@@ -49,7 +49,7 @@ block content
 
             .row-fluid
                 .span6
-                    h3 Temps d'attente éstimé
+                    h3 Temps d'attente estimé
                     label.checkbox
                         input(type='checkbox', name='wait', checked='checked', data-wait-min='null', data-wait-max='null')
                         | Pas encore de donnée
@@ -76,7 +76,7 @@ block content
                         | Nos info sur les structures 
 
 block scripts
-    script(src="http://libs.cartocdn.com/cartodb.js/v2/cartodb.js")
+    script(src="//libs.cartocdn.com/cartodb.js/v2/cartodb.js")
     script(src="/javascripts/explorer.js")
 
     script(type="infowindow/html", id="infowindow_template")

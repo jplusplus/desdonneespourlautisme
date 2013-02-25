@@ -7994,6 +7994,9 @@ a:hover {
   top: 40px;
   left: auto;
 }
+#map .search_box {
+  padding-bottom: 3px;
+}
 #contribute .help {
   font-size: 14px;
   color: #555555;
