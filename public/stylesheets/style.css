@@ -7994,6 +7994,16 @@ a:hover {
   top: 40px;
   left: auto;
 }
+#contribute .help {
+  font-size: 14px;
+  color: #555555;
+}
+#contribute label {
+  font-weight: bold;
+}
+#contribute .required {
+  color: #cf0609;
+}
 .sidebar {
   position: absolute;
   z-index: 100;
