@@ -7842,8 +7842,6 @@ a:hover {
   cursor: pointer;
 }
 footer {
-  position: relative;
-  z-index: -1;
   padding: 30px;
 }
 #old-browser {
