@@ -1,0 +1,13 @@
+extends layout
+
+block content  
+    .gallery  
+        .photos
+            - for(var i = 0; i < 2 ;i++ )
+                each photo in photoList
+                    img(src="/images/portrait/"+photo, width=120)
+
+    .container
+        .white-panel
+            h1 Contribuez
+            iframe(src="https://docs.google.com/forms/d/1vyHgX3stQZyOj3FS2_c6UiNgi3Els05tE806onQ7a5M/viewform?embedded=true", width="100%", height="700", frameborder="0", marginheight="0", marginwidth="0") Loading...

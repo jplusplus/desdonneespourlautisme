@@ -1,0 +1,94 @@
+extends layout
+
+block stylesheets
+    link(rel="stylesheet", href="http://libs.cartodb.com/cartodb.js/v2/themes/css/cartodb.css")
+    //if lt IE 8
+        link(rel="stylesheet", href="http://libs.cartodb.com/cartodb.js/v2/themes/css/cartodb.ie.css")    
+
+block content
+    #map
+    .sidebar
+        .close x
+        .toggle
+            .row-fluid
+                .span6
+                    h3 Taille des centres
+                    label.checkbox
+                        input(type='checkbox', name='places', checked='checked', data-places-min='0', data-places-max='4')
+                        | Moins de 5 places
+                    label.checkbox
+                        input(type='checkbox', name='places', checked='checked', data-places-min='5', data-places-max='9')
+                        | Entre 5 et 10 places
+                    label.checkbox
+                        input(type='checkbox', name='places', checked='checked', data-places-min='10', data-places-max='19')
+                        | Entre 10 et 20 places
+                    label.checkbox
+                        input(type='checkbox', name='places', checked='checked', data-places-min='20', data-places-max='39')
+                        | Entre 20 et 40 places
+                    label.checkbox
+                        input(type='checkbox', name='places', checked='checked', data-places-min='40', data-places-max='100000')
+                        | Plus 40 places
+
+                .span6
+                    h3 Année d'ouverture
+                    label.checkbox
+                        input(type='checkbox', name='dates', checked='checked', data-dates-min='1900', data-dates-max='1959')
+                        | Entre 1900 et 1960
+                    label.checkbox
+                        input(type='checkbox', name='dates', checked='checked', data-dates-min='1960', data-dates-max='1989')
+                        | Entre 1960 et 1990
+                    label.checkbox
+                        input(type='checkbox', name='dates', checked='checked', data-dates-min='1990', data-dates-max='1999')
+                        | Entre 1990 et 2000
+                    label.checkbox
+                        input(type='checkbox', name='dates', checked='checked', data-dates-min='2000', data-dates-max='2009')
+                        | Entre 2000 et 2010
+                    label.checkbox
+                        input(type='checkbox', name='dates', checked='checked', data-dates-min='2010', data-dates-max='100000')
+                        | Depuis 2010
+
+            .row-fluid
+                .span6
+                    h3 Temps d'attente éstimé
+                    label.checkbox
+                        input(type='checkbox', name='wait', checked='checked', data-wait-min='null', data-wait-max='null')
+                        | Pas encore de donnée
+                    label.checkbox
+                        input(type='checkbox', name='wait', checked='checked', data-wait-min='0', data-wait-max='6')
+                        | Moins de 6 mois
+                    label.checkbox
+                        input(type='checkbox', name='wait', checked='checked', data-wait-min='7', data-wait-max='12')
+                        | Plus de 6 mois
+                    label.checkbox
+                        input(type='checkbox', name='wait', checked='checked', data-wait-min='13', data-wait-max='24')
+                        | Plus d'un an
+                    label.checkbox
+                        input(type='checkbox', name='wait', checked='checked', data-wait-min='25', data-wait-max='36')
+                        | Plus de deux ans
+                    label.checkbox
+                        input(type='checkbox', name='wait', checked='checked', data-wait-min='37', data-wait-max='1000000')
+                        | Plus de trois ans
+
+                .span6
+                    h3 Télécharger
+                    a.btn.btn-red.btn-block(href="http://silveroux.cartodb.com/tables/3674/public", target="_blank") 
+                        i.icon-white.icon-download-alt.right05 
+                        | Nos info sur les structures 
+
+block scripts
+    script(src="http://libs.cartocdn.com/cartodb.js/v2/cartodb.js")
+    script(src="/javascripts/explorer.js")
+
+    script(type="infowindow/html", id="infowindow_template")
+        div(class="cartodb-popup")
+            a(href="#close",class="cartodb-popup-close-button close") x
+            div(class="cartodb-popup-content-wrapper")
+                div(class="cartodb-popup-content")
+                    h4 {{content.data.nom}}
+                    ul(class="popup-list")
+                        li Année d'ouverture: <strong>{{content.data.annee_d_ouverture}}</strong>
+                        li Nombre de places: <strong>{{content.data.nombre_de_places}}</strong>
+
+            div(class="cartodb-popup-tip-container")
+       
+

@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    .row-fluid.home-banner
+        .span6.gallery       
+            .photos
+                - for(var i = 0; i < 2 ;i++ )
+                    each photo in photoList
+                        img(src="/images/portrait/"+photo, width=120)
+        .span6.side-map
+            h1 Des données pour l'autisme
+            blockquote
+                p <strong>Pour piloter une politique, il faut des données.</strong> Et en matière d’autisme, comme pour tout ce qui concerne nos concitoyens handicapés, <strong>les données sociodémographiques ou socio-économiques font défaut.</strong>
+                small
+                    | Christel Prado, <cite title="Le coût économique et social"><a href="http://www.lecese.fr/sites/default/files/pdf/Avis/2012/2012_17_autisme.pdf">Le coût économique et social</a></cite> [PDF]
+            p.top30
+                a.btn.btn-large(href="/contribuer")
+                    i.icon-comment.right10
+                    | Contribuer
+                a.btn.btn-large.left10.btn-red(href="/explorer") 
+                    i.icon-map-marker.icon-white.right10
+                    |  Explorer
