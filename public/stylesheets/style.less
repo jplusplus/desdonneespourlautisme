@@ -1,8 +1,3 @@
-@linkColorVariant:#3194AA;
-@activeColor:#B4131D;
-@toolboxColor:#fafafa;
-@toolboxBorder:#D7D7D7;
-
 @import "vendor/bootstrap/bootstrap.less";
 @import "vendor/bootstrap/responsive.less";
 @import "tools.less";
@@ -20,11 +15,17 @@ body {
 }
 
 a {
-    color:@linkColorVariant;
+    color:@linkColor;
     &:hover { 
         text-decoration:none; 
         cursor:pointer; 
     }
+}
+
+footer {
+    position:relative;
+    z-index:-1;
+    padding:30px;
 }
 
 #old-browser {

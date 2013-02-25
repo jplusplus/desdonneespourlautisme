@@ -40,7 +40,16 @@ html.no-js
                     a(href="/explorer") Explorer            
 
     block content
-    footer
+
+    if path!=="/explorer"
+        footer
+            .container.tc
+                p 
+                 | <strong>Des données pour l'autisme</strong> est 
+                 | un projet de <a href="https://twitter.com/silveroux" target="_blank">Damien Brunon</a> 
+                 | développé par <a href="https://twitter.com/pirhoo" target="_blank">Pierre Romera</a>
+                 | et disponible <a href="https://github.com/jplusplus/desdonneespourlautisme" target="_blank">sur Github</a>.
+            
 
     script(src="/javascripts/vendor/modernizr.custom.js", type="text/javascript")
     script(src="/javascripts/vendor/jquery-1.7.1.min.js", type="text/javascript")
