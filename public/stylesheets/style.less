@@ -2,9 +2,6 @@
 @import "vendor/bootstrap/responsive.less";
 @import "tools.less";
 
-body, html {
-    min-width:450px;
-}
 
 body {        
     padding-top:@navbarHeight + 4px;
@@ -257,6 +254,7 @@ footer {
     padding-top:0;
     z-index:100;
     width:500px;    
+    min-width:100px;
 
     h3 {
         text-transform:uppercase;
@@ -270,6 +268,9 @@ footer {
     }         
 
     &.closed {
+
+        right:1%;
+        height:10px;
         
         .toggle {            
             display:none;    
@@ -286,47 +287,43 @@ footer {
             font-size:20px;
         }     
 
+        .close {
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+            .opacity(0);
+        }
 
-        right:1%;
-        height:10px;
     }
 
 
     @media (max-width: 767px) {
 
-        height:10px;  
         width:auto;
-        min-width:100px;
         font-size:12px;
+        right:1%;
          
-        &:before {
-            position:absolute;
-            top:0; left:0;
-            bottom:0; right:0;
-            text-align:center;
-            content:"filtrer";
-            font-family:@headingsFontFamily;
-            text-transform:uppercase;
-            font-size:20px;
+        &.closed {
+            
+            right:auto;
+            
+            &:before {
+                position:absolute;
+                top:0; left:0;
+                bottom:0; right:0;
+                text-align:center;
+                content:"filtrer";
+                font-family:@headingsFontFamily;
+                text-transform:uppercase;
+                font-size:20px;
+            }
         }     
-
-        .toggle {            
-            display:none;    
-        }
 
         h3 {
             margin-top:5px;
             margin-bottom:0;
             font-size:17px;
-        }
-
-
-        &:hover {
-            height:auto;
-            &:before { display:none }
-            .toggle {
-                display:block;    
-            }
         }
 
     }    

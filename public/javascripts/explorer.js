@@ -30,6 +30,8 @@
 
   function resize() {
     $("#map, .sidebar").css("top", $(".navbar").outerHeight() )
+    // Close the sidebar in mobile view
+    if( $(window).width() <  767) $("#map, .sidebar").addClass("closed");
   }
 
   // create layer selector

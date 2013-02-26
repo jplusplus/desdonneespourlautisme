@@ -7822,10 +7822,6 @@ a.badge:hover {
 .tj {
   text-align: justify;
 }
-body,
-html {
-  min-width: 450px;
-}
 body {
   padding-top: 49px;
 }
@@ -8069,6 +8065,7 @@ footer {
   padding-top: 0;
   z-index: 100;
   width: 500px;
+  min-width: 100px;
 }
 .sidebar h3 {
   text-transform: uppercase;
@@ -8098,14 +8095,24 @@ footer {
   text-transform: uppercase;
   font-size: 20px;
 }
+.sidebar.closed .close {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
 @media (max-width: 767px) {
   .sidebar {
-    height: 10px;
     width: auto;
-    min-width: 100px;
     font-size: 12px;
+    right: 1%;
   }
-  .sidebar:before {
+  .sidebar.closed {
+    right: auto;
+  }
+  .sidebar.closed:before {
     position: absolute;
     top: 0;
     left: 0;
@@ -8117,22 +8124,10 @@ footer {
     text-transform: uppercase;
     font-size: 20px;
   }
-  .sidebar .toggle {
-    display: none;
-  }
   .sidebar h3 {
     margin-top: 5px;
     margin-bottom: 0;
     font-size: 17px;
-  }
-  .sidebar:hover {
-    height: auto;
-  }
-  .sidebar:hover:before {
-    display: none;
-  }
-  .sidebar:hover .toggle {
-    display: block;
   }
 }
 html body .cartodb-popup .popup-list {
