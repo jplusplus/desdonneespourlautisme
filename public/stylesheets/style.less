@@ -200,17 +200,45 @@ footer {
     }
 }
 
-.sidebar {
+.sidebar, .legend {
     position:absolute;
-    z-index:100;
-    top:@navbarHeight+4px;
     left:1%;
     background:@red;
     color:@white;
     padding:20px;
-    padding-top:0;
     .border-radius(0 0 2px 2px);
     .box-shadow(0 0 10px 0 #000);
+    z-index:100;
+}
+
+.legend {    
+    bottom:1%;    
+    padding:10px;
+    z-index:99;
+    font-size:12px;
+    
+    ul { 
+        padding:0; 
+        margin:0; 
+        li {
+            padding-top:5px;
+            .dot {
+                width:15px;
+                height:15px;
+                display:inline-block;
+                margin-right:10px;
+                margin-bottom:-3px;
+                border:1px solid fade(white, 40);
+                .border-radius(50%);
+            }
+        }
+    }
+}
+
+.sidebar {
+    top:@navbarHeight+4px;
+    padding-top:0;
+    z-index:100;
     width:500px;    
 
     h3 {

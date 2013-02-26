@@ -8010,21 +8010,49 @@ footer {
 #contribute .required {
   color: #cf0609;
 }
-.sidebar {
+.sidebar,
+.legend {
   position: absolute;
-  z-index: 100;
-  top: 49px;
   left: 1%;
   background: #cf0609;
   color: #ffffff;
   padding: 20px;
-  padding-top: 0;
   -webkit-border-radius: 0 0 2px 2px;
   -moz-border-radius: 0 0 2px 2px;
   border-radius: 0 0 2px 2px;
   -webkit-box-shadow: 0 0 10px 0 #000000;
   -moz-box-shadow: 0 0 10px 0 #000000;
   box-shadow: 0 0 10px 0 #000000;
+  z-index: 100;
+}
+.legend {
+  bottom: 1%;
+  padding: 10px;
+  z-index: 99;
+  font-size: 12px;
+}
+.legend ul {
+  padding: 0;
+  margin: 0;
+}
+.legend ul li {
+  padding-top: 5px;
+}
+.legend ul li .dot {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: -3px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.sidebar {
+  top: 49px;
+  padding-top: 0;
+  z-index: 100;
   width: 500px;
 }
 .sidebar h3 {

@@ -74,7 +74,27 @@ block content
                     a.btn.btn-red.btn-block(href="http://silveroux.cartodb.com/tables/3674/public", target="_blank") 
                         i.icon-white.icon-download-alt.right05 
                         | Nos info sur les structures 
-                        
+    .legend
+        ul.unstyled
+            li
+                i.dot(style='background-color:#336699') 
+                | Pas encore d'information
+            li
+                i.dot(style='background-color:#F9D654') 
+                | Mois de 6 mois d'attente
+            li
+                i.dot(style='background-color:#E9B64D') 
+                | Plus de 6 mois d'attente
+            li
+                i.dot(style='background-color:#E48743') 
+                | Plus de un an
+            li
+                i.dot(style='background-color:#E44D2E') 
+                | Plus de deux ans
+            li
+                i.dot(style='background-color:#9E3B33') 
+                | Plus de trois ans
+
 
 block scripts
     script(src="//libs.cartocdn.com/cartodb.js/v2/cartodb.js")
