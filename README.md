@@ -12,25 +12,38 @@ This project is build at the top of the pleasant [Node Package Manager](http://n
 
     $ npm install
 
-### Configuration files
-The default configuration is present into the *config/default.json*. Every modifications in this file will be commited. The *runtime.json* file is an auto-generated file that you shouldn't edit.
-
-* **Development mode**: If you want to overide default values, you have to create a file named *config/development.json* and corresponding to your local configuration. This file will be ignored by git. 
-* **Production mode**: if you want to overide default values, you have to edit the *config/production.json* file to fit with your production environment. This file will be ignored by git. 
-
 ### Environment variables
 The following environment variables can be use with the highest priority :
 
 * **PORT** defines the port to listen to (ex: *80*);
-* **API_URL** defines the url to the API;
 * **NODE_ENV** defines the runing mode (ex: *development*, *production*, etc);
 
-### Common issues
-* **Error: watch ENOSPC**: Do not run the application with DropBox on the same system.
-Link: https://groups.google.com/forum/?fromgroups=#!topic/nodejs/LX7sz9f-fmY
+## Run
+To launch the server (once the installation is complete), just run from the root of the project:
 
-## Create a mission
-TODO - [See also...](https://github.com/jplusplus/desdonneespourlautisme)
+```
+$ node app.js
+```
 
-## Licence
-Copryright © [Journalism++](http://jplusplus.org) - All rights reserved
+## MIT License
+
+Copyright (c) 2013 Journalism++ SAS - Paris, France 
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
