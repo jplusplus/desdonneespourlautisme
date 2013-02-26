@@ -1,22 +1,36 @@
 extends layout
 
 block content
-    .row-fluid.home-banner
-        .span6.gallery       
+    .home-banner
+        .gallery       
             .photos
                 - for(var i = 0; i < 2 ;i++ )
                     each photo in photoList
                         img(src="/images/portrait/"+photo, width=120)
-        .span6.side-map
-            h1 Des données pour l'autisme
-            blockquote
-                p <strong>Pour piloter une politique, il faut des données.</strong> Et en matière d’autisme, comme pour tout ce qui concerne nos concitoyens handicapés, <strong>les données sociodémographiques ou socio-économiques font défaut.</strong>
-                small
-                    | Christel Prado, <cite title="Le coût économique et social de l'autisme"><a href="http://www.lecese.fr/sites/default/files/pdf/Avis/2012/2012_17_autisme.pdf">Le coût économique et social de l'autisme</a></cite> [PDF], octobre 2012
-            p.top30
-                a.btn.btn-large(href="/contribuer")
-                    i.icon-comment.right10
-                    | Contribuer
-                a.btn.btn-large.left10.btn-red(href="/explorer") 
-                    i.icon-map-marker.icon-white.right10
-                    |  Explorer
+        .row-fluid
+            .span6.offset6.side-map
+                h1 Des données pour l'autisme
+                blockquote
+                    p <strong>Pour piloter une politique, il faut des données.</strong> Et en matière d’autisme, comme pour tout ce qui concerne nos concitoyens handicapés, <strong>les données sociodémographiques ou socio-économiques font défaut.</strong>
+                    small
+                        | Christel Prado, <cite title="Le coût économique et social de l'autisme"><a href="http://www.lecese.fr/sites/default/files/pdf/Avis/2012/2012_17_autisme.pdf">Le coût économique et social de l'autisme</a></cite> [PDF], octobre 2012
+
+                p 
+                    | Reconnu comme un handicap depuis 1996, on sait toujours peu de choses sur l'autisme en France.
+                    | Combien de places sont réservées aux autistes dans l'Education Nationale, 
+                    | quel accès ont-ils aux structures qui leurs sont dédiées, 
+                    | quelles méthodes sont pratiquées dans ces structures, 
+                    | la formation des professionnels qui les accompagnent est-elle adéquate, 
+                    | l'offre de soin et de prise en charge correspond-elle à la demande de la population autiste?
+                p
+                    | Des questions auxquelles "Des données pour l'autisme" a pour objectif de répondre.
+                    | Questionnaires en ligne, utilisation des données officielles, enquêtes journalistiques 
+                    | viendront progressivement enrichir une base de données mis en forme dans une carte interactive.
+
+                p.top30
+                    a.btn.btn-large(href="/contribuer")
+                        i.icon-comment.right10
+                        | Contribuer
+                    a.btn.btn-large.left10.btn-red(href="/explorer") 
+                        i.icon-map-marker.icon-white.right10
+                        |  Explorer

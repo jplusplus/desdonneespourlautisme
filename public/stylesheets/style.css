@@ -7890,16 +7890,30 @@ footer {
   -moz-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
 }
-.home-banner .photos {
+.home-banner .gallery {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 50%;
+}
+@media (max-width: 767px) {
+  .home-banner .gallery {
+    position: relative;
+    right: auto;
+  }
+}
+.home-banner .gallery .photos {
   max-height: 600px;
 }
 @media (max-width: 767px) {
-  .home-banner .photos {
+  .home-banner .gallery .photos {
     max-height: 140px;
   }
 }
 .home-banner .side-map {
   color: white;
+  padding-bottom: 100px;
 }
 .home-banner .side-map h1 {
   border-top: 4px solid white;
