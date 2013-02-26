@@ -54,29 +54,18 @@
   function buildQuery(theme, col) {
 
     var theme_min_array = ['100000']
-        , theme_max_array = ['0']
-        , is_null = 0;
+        , theme_max_array = ['0'];
 
     // looks up the values in the checkboxes
     $('input[name=' + theme + ']:checked').each(function() {
-
-        //cas spécial pour les temps d'attente
-        if ($(this).attr('data-' + theme + '-max') == "null") {
-          
-          is_null = 1;
-
-        }
 
         theme_min_array.push($(this).attr('data-' + theme + '-min'));
         theme_max_array.push($(this).attr('data-' + theme + '-max'));
     
     });
-
-    if (is_null) {
-      return "(" + col + " IS NULL)";
-    } else {
-      return  "(" + col + " >= " + Math.min.apply( Math, theme_min_array ) + " and " + col + " < " + Math.max.apply( Math, theme_max_array ) + ")";
-    }
+    
+    return  "(" + col + " >= " + Math.min.apply( Math, theme_min_array ) + " and " + col + " < " + Math.max.apply( Math, theme_max_array ) + ")";
+  
   }
 
 })(window, jQuery);
