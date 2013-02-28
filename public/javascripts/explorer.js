@@ -10,7 +10,7 @@
           zoomControl: true,
           loaderControl: true,
           center_lat: 47,
-          center_lon: 2,
+          center_lon: -1,
           zoom: 6,          
           cartodb_logo: false,
           infowindow: true
