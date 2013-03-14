@@ -7825,7 +7825,7 @@ a.badge:hover {
 body {
   padding-top: 49px;
 }
-@media (max-width: 979px) {
+@media (max-width: 770px) {
   body {
     padding: 0;
   }
@@ -7839,6 +7839,7 @@ a:hover {
 }
 footer {
   padding: 30px;
+  padding-bottom: 0;
 }
 #old-browser {
   z-index: 500;
@@ -8145,8 +8146,9 @@ html body .cartodb-popup a {
  */
 html body .navbar {
   margin: 0;
+  position: fixed;
 }
-@media (max-width: 979px) {
+@media (max-width: 770px) {
   html body .navbar {
     position: relative;
   }

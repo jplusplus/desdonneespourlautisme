@@ -6,7 +6,7 @@
 body {        
     padding-top:@navbarHeight + 4px;
     
-    @media (max-width: 979px) {
+    @media (max-width: 770px) {
         padding:0;
     }
 }
@@ -21,6 +21,7 @@ a {
 
 footer {
     padding:30px;
+    padding-bottom:0;
 }
 
 #old-browser {
@@ -350,9 +351,9 @@ html body .cartodb-popup  {
 html body {    
     .navbar {
 
-        margin:0;
-        
-        @media (max-width: 979px) {
+        margin:0;        
+        position:fixed;
+        @media (max-width: 770px) {
             position:relative;
         }
 
