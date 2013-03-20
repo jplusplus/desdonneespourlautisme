@@ -45,7 +45,7 @@
       
       query += buildQuery("places", "nombre_de_places");
       query += " and " + buildQuery("dates", "annee_d_ouverture");
-      query += " and " + buildQuery("wait", "temps_d_attente_minimum_selon_les_temoignages");
+      query += " and " + buildQuery("wait", "temps_d_attente_maximum_selon_les_temoignages");
 
       // change the query in the layer to update the map
       layer.setQuery(query);
