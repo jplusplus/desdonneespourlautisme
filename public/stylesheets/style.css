@@ -8148,9 +8148,9 @@ html body .cartodb-popup a {
 html body .cartodb-popup p {
   margin-top: 10px;
 }
-/* 
+/*
  * Bootstrap override
- */
+ */
 html body .navbar {
   margin: 0;
   position: fixed;
